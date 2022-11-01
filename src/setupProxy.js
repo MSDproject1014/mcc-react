@@ -5,10 +5,10 @@ module.exports = function(app) {
 //    app.use(proxy('/api', { target: 'http://localhost:8080/' }));
 //    app.use(proxy('/account', { target: 'http://localhost:8081/' })); 
 	
-	app.use(proxy('/api', { target: 'http://172.24.0.2:8080/' }));
-	app.use(proxy('/account', { target: 'http://172.24.0.3:8081/' }));
+	app.use(proxy('/api', { target: 'http://10.102.14.160:8080/' }));
+	app.use(proxy('/account', { target: 'http://10.111.88.16:8081/' }));
 
-/*     app.use(proxy('/api', { target: 'http://10.111.48.90:8080/' }));
-    app.use(proxy('/account', { target: 'http://10.104.111.92:8081/' })); */
+/*     app.use(proxy('/api', { target: 'http://172.17.0.3:8080/' }));
+    app.use(proxy('/account', { target: 'http://172.17.0.6:8081/' })); */
 
 };
