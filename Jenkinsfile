@@ -1,6 +1,6 @@
 node {
     
-    stage ("Checkout React Client"){
+    stage ("Checkout React Client") {
         git branch: 'main', url: 'https://github.com/MSDproject1014/mcc-react.git'
     }
     
@@ -27,12 +27,12 @@ node {
 	   parameters: [choice(choices: 'Yes\nNo', 
 	   description: '', name: 'Pass')]
 	
-	  if(response=="Yes") {
-	    stage('Deploy to Kubenetes cluster - react client') {
-	      sh "kubectl create deployment mccreact --image=mccreact:v1.0"
-	      sh "kubectl expose deployment mccreact --type=LoadBalancer --port=80"
-	    }
-	  }
+        if(response=="Yes") {
+            stage('Deploy to Kubenetes cluster - react client') {
+                sh "kubectl create deployment mccreact --image=mccreact:v1.0"
+                sh "kubectl expose deployment mccreact --type=LoadBalancer --port=80"
+            }
+        }
     }
 
     stage("Production Deployment View") {
