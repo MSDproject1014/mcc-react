@@ -6,4 +6,4 @@ module.exports = function(app) {
 	app.use(proxy('/account', { target: 'http://10.99.244.48:8081/' }));
 };
 
-test
+test2
